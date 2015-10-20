@@ -1,0 +1,112 @@
+The following are the commands used in GIT and GITHUB.
+
+The main reason we use GitHub is to get all our data/projects into source control and work with
+remote repositaries.
+
+Previously Microsoft TFS was used. It is microsoft application management suite.
+The main disadvante with this is it is hard for single users as it mailny supports groups.
+
+---> git init   ---   This initialize our repositary in the current folder.
+
+---> git status   ---   This gives the status at any given time.
+
+---> git add . (or) git add fileName.ext   ---   This adds/stages the file to the local repositary.
+
+---> git add * .ext  ---   This adds/stages the files with particular extensions.
+
+---> git commit -m message   ---   This commits all the changes we made to the file/folder.
+
+---> git log   ---   This gives the commit history.
+
+---> touch filename    ---   This is used to create new files. 
+
+---> .gitignore    ---   This is used to ignore particular files.
+
+Branching: This creates a copy of the code that we work on, so that the original code woll be remained as it is.
+
+Note: The name of the main branch will asways be MASTER.
+
+---> git branch branchName   ---   Command to create new branch.
+
+---> git checkout branchName   ---   To move to a particular branch.
+
+---> git merge branchName   --- This comamnd is used to merge the new barnch.
+
+Note: We should always be in the master branch to do merge operation. 
+      This is because Master is the destination and the new branch is the source.
+
+---> git remote   ---   This gives the list of remote repositarirs.
+
+
+
+
+Downloading files/folders from GitHub:
+
+We call the process of downloading the files/folders from GitHub as CLONING.
+
+For cloning we need the clone url that we cna find in the remote repositary.
+
+git clone url   ---   This creates a new folder with the name of the remote repositary.
+
+git fetch origin   ---   This will fwtch remote repositary to the local repositary but does not merge. 
+                         We need to merge manually.
+
+git pull origin   ---   This automatically fetch the data from remote repositary to the local repositary and merge it.
+
+
+After all the changes are done to the repositary we need to add them and commit them.
+
+Then we need to push this repositary to the remore host. the command we use is 
+
+---> git push origin master 
+
+
+            
+
+Uploading files to GitHub.
+
+---> Create a remote repositary in GitHub(www.github.com).
+
+---> First create a file/folder in the local repositary(in local discs). 
+
+---> Open Git Bash and change the path to the desired file/folder in the local repositary.
+
+---> Type the command git init.
+
+---> Then we need to add our file/folder to the GitHub. For this the command we use is,
+     git add . (or) git add FileName.ext
+
+---> After adding the file/folder to the GitHub we need to commit it, the commit command is,
+     git commit -m message
+
+---> As of now we added and commited our file/folder to the GitHub, but nohing was uploaded to it.
+
+---> For this we need to copy the destination url to the Git Bash. This will be available in the 
+     repository we created.
+
+---> After that we need to push the file/folder to the GitHub. For this the command we use is
+     git push -u origin master
+
+---> This will prompt us to enter ou user name and passcode for the GitHub.
+
+---> After entering these login credentials our file/folder will be uploaded to the GitHub.
+
+---> Go to the GitHub webpage, refresh it and you can find the uploaded file/folder.
+
+
+---> We also can upload more files to the same folder. Create new file/folder.
+
+---> Type ls in the Git Bash. This gives the list of ll files in the destination path.
+
+---> Then again add the file by using add command
+     git add . (or) git add FileName.ext
+
+---> Commit the file by using the commit command
+     git commit -m message
+
+---> Then for uploading the file/folder to the GitHub we use PUSH command
+     git push
+
+---> It again asks for the login credentials.
+
+---> After using the push command all the files will be uploaded to the GitHub.
